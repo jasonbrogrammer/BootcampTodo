@@ -93,6 +93,8 @@
 			children = (
 				96E36EDF176BC2C700D59598 /* AppDelegate.h */,
 				96E36EE0176BC2C700D59598 /* AppDelegate.m */,
+				96E36EF9176BD3A800D59598 /* HelloWorldViewController.h */,
+				96E36EFA176BD3A800D59598 /* HelloWorldViewController.m */,
 				96E36EE8176BC2C700D59598 /* MainStoryboard_iPhone.storyboard */,
 				96E36EEB176BC2C700D59598 /* MainStoryboard_iPad.storyboard */,
 				96E36EEE176BC2C700D59598 /* MasterViewController.h */,
@@ -100,8 +102,6 @@
 				96E36EF1176BC2C700D59598 /* DetailViewController.h */,
 				96E36EF2176BC2C700D59598 /* DetailViewController.m */,
 				96E36ED7176BC2C700D59598 /* Supporting Files */,
-				96E36EF9176BD3A800D59598 /* HelloWorldViewController.h */,
-				96E36EFA176BD3A800D59598 /* HelloWorldViewController.m */,
 			);
 			path = BootcampTodo;
 			sourceTree = "<group>";

@@ -10,4 +10,6 @@
 
 @interface HelloWorldViewController : UIViewController
 
+@property (nonatomic,strong) IBOutlet UILabel* helloWorldLabel;
+
 @end
