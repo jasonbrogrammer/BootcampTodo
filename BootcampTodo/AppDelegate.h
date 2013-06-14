@@ -10,6 +10,8 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+// strong tells arc to retain
+
 @property (strong, nonatomic) UIWindow *window;
 
 @end

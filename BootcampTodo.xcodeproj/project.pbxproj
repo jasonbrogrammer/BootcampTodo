@@ -20,6 +20,7 @@
 		96E36EED176BC2C700D59598 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E36EEB176BC2C700D59598 /* MainStoryboard_iPad.storyboard */; };
 		96E36EF0176BC2C700D59598 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E36EEF176BC2C700D59598 /* MasterViewController.m */; };
 		96E36EF3176BC2C700D59598 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E36EF2176BC2C700D59598 /* DetailViewController.m */; };
+		96E36EFB176BD3A800D59598 /* HelloWorldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E36EFA176BD3A800D59598 /* HelloWorldViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,8 @@
 		96E36EEF176BC2C700D59598 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		96E36EF1176BC2C700D59598 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		96E36EF2176BC2C700D59598 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		96E36EF9176BD3A800D59598 /* HelloWorldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldViewController.h; sourceTree = "<group>"; };
+		96E36EFA176BD3A800D59598 /* HelloWorldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelloWorldViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 				96E36EF1176BC2C700D59598 /* DetailViewController.h */,
 				96E36EF2176BC2C700D59598 /* DetailViewController.m */,
 				96E36ED7176BC2C700D59598 /* Supporting Files */,
+				96E36EF9176BD3A800D59598 /* HelloWorldViewController.h */,
+				96E36EFA176BD3A800D59598 /* HelloWorldViewController.m */,
 			);
 			path = BootcampTodo;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 				96E36EE1176BC2C700D59598 /* AppDelegate.m in Sources */,
 				96E36EF0176BC2C700D59598 /* MasterViewController.m in Sources */,
 				96E36EF3176BC2C700D59598 /* DetailViewController.m in Sources */,
+				96E36EFB176BD3A800D59598 /* HelloWorldViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
