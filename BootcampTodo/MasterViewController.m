@@ -29,6 +29,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+    
+    _objects = [[NSMutableArray alloc] init];
+    
+    [_objects addObject:[NSDate date]];
+     [_objects addObject:[NSDate date]];
+     [_objects addObject:[NSDate date]];
+     [_objects addObject:[NSDate date]];
+    
+    
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 

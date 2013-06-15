@@ -66,6 +66,42 @@
     return NO;
 }
 
+- (BOOL) textFieldShouldBeginEditing:(UITextField *)textField{
+    
+    [UIView animateWithDuration:0.5f animations:^{
+        self.view.top -= 100;
+    }];
+    
+    
+    /**
+     
+     animations:^{
+     self.view.top += 100;
+     }];
+     
+     */
+    
+    
+    
+}
+
+
+- (BOOL) textFieldShouldEndEditing:(UITextField *)textField{
+    
+    [UIView animateWithDuration:0.5f animations:^{
+        self.view.top += 100;
+    }];
+    
+    
+    /**
+     
+     animations:^{
+     self.view.top += 100;
+     }];
+     
+     */
+    
+}
 
 -(IBAction)navigateToOtherController:(id)sender
 {
@@ -73,8 +109,15 @@
     
     if([self.textField isFirstResponder]){
         [self.textField resignFirstResponder];
+        
+        
     }else{
         [self.textField becomeFirstResponder];
+        
+        
+        
+        
+        
     }
     
        
