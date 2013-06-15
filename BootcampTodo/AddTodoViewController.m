@@ -36,11 +36,26 @@
 
 
 -(IBAction)cancel:(id)sender{
-    
-    
+    NSLog(@" cancel ");
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+        NSLog(@" callback ");
+    }];
 }
 
 -(IBAction)done:(id)sender{
+    NSLog(@" done");
+    
+    if(self.delegate){
+        if([self.delegate respondsToSelector:@selector(addTodoItem:)]){
+            [self.delegate performSelector:@selector(addTodoItem:)];
+        }
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+        NSLog(@" callback ");
+    }];
     
 }
 

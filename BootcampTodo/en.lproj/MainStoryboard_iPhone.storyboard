@@ -7,7 +7,7 @@
         <!--Add Todo View Controller - Root View Controller-->
         <scene sceneID="sED-Li-27A">
             <objects>
-                <tableViewController id="pru-6i-98c" customClass="AddTodoViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AddTodoController1" id="pru-6i-98c" customClass="AddTodoViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="AW0-hU-MDe">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,8 +43,16 @@
                         </sections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="2qK-aj-od7">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="oik-xD-2fb"/>
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="ciU-DZ-Hfb"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="oik-xD-2fb">
+                            <connections>
+                                <action selector="cancel:" destination="pru-6i-98c" id="vle-5h-F4R"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="ciU-DZ-Hfb">
+                            <connections>
+                                <action selector="done:" destination="pru-6i-98c" id="56v-1c-52p"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="TXT-44-ecB" id="BLr-gC-5Ol"/>
@@ -243,7 +251,7 @@
                     <navigationItem key="navigationItem" title="Master" id="36">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="OFE-Pm-jQk">
                             <connections>
-                                <segue destination="PD1-jh-Qa4" kind="modal" id="MVO-3Z-TmS"/>
+                                <action selector="openAddTodoController:" destination="12" id="l92-tg-i2z"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -288,6 +296,8 @@
         <class className="AddTodoViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AddTodoViewController.h"/>
             <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="done:"/>
                 <relationship kind="outlet" name="nameTextField" candidateClass="UITextField"/>
             </relationships>
         </class>
@@ -309,6 +319,9 @@
         </class>
         <class className="MasterViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="openAddTodoController:"/>
+            </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>

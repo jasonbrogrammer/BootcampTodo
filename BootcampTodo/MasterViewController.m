@@ -8,6 +8,8 @@
 
 #import "MasterViewController.h"
 
+#import "AddTodoViewController.h"
+
 #import "DetailViewController.h"
 
 @interface MasterViewController () {
@@ -55,6 +57,26 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)openAddTodoController:(id)sender{
+    
+    UINavigationController* navController = [[UINavigationController alloc]init];
+    
+    AddTodoViewController* addController = [self.storyboard instantiateViewControllerWithIdentifier:@"AddTodoController1"];
+    addController.delegate = self;
+    [navController pushViewController:addController animated:NO];
+    
+    [self presentViewController:navController animated:YES completion:nil];
+    /*
+     
+     [navController pushViewController:addController animated:NO];
+     
+     [self presentViewController:navController animated:YES completion:nil];
+     
+     
+     */
+    
 }
 
 - (void)insertNewObject:(id)sender

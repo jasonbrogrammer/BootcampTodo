@@ -14,4 +14,6 @@
 
 @property (strong, nonatomic) DetailViewController *detailViewController;
 
+- (IBAction)openAddTodoController:(id)sender;
+
 @end
