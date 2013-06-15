@@ -79,6 +79,14 @@
     
 }
 
+- (void) addTodoItem:(id)todoItem{
+    
+    
+    
+    NSLog(@" Adding TODO ITem =) ");
+}
+
+
 - (void)insertNewObject:(id)sender
 {
     if (!_objects) {

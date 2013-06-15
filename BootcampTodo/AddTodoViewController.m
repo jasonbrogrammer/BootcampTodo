@@ -46,12 +46,17 @@
 -(IBAction)done:(id)sender{
     NSLog(@" done");
     
+    NSString* todoName = self.nameTextField.text;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"TodoCreated" object:todoName];
+    
+    /*
     if(self.delegate){
         if([self.delegate respondsToSelector:@selector(addTodoItem:)]){
-            [self.delegate performSelector:@selector(addTodoItem:)];
+            [self.delegate performSelector:@selector(addTodoItem:) withObject:nil];
         }
     }
-    
+    */
     [self dismissViewControllerAnimated:YES completion:^{
         
         NSLog(@" callback ");
