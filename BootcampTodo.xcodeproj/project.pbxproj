@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9666685B176CE24C003C6C64 /* UIView+GeometryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9666685A176CE24C003C6C64 /* UIView+GeometryAdditions.m */; };
+		9666685E176D11CA003C6C64 /* AddTodoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9666685D176D11CA003C6C64 /* AddTodoViewController.m */; };
 		96E36ED1176BC2C700D59598 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E36ED0176BC2C700D59598 /* UIKit.framework */; };
 		96E36ED3176BC2C700D59598 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E36ED2176BC2C700D59598 /* Foundation.framework */; };
 		96E36ED5176BC2C700D59598 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E36ED4176BC2C700D59598 /* CoreGraphics.framework */; };
@@ -27,6 +28,8 @@
 /* Begin PBXFileReference section */
 		96666859176CE24C003C6C64 /* UIView+GeometryAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GeometryAdditions.h"; sourceTree = "<group>"; };
 		9666685A176CE24C003C6C64 /* UIView+GeometryAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GeometryAdditions.m"; sourceTree = "<group>"; };
+		9666685C176D11CA003C6C64 /* AddTodoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTodoViewController.h; sourceTree = "<group>"; };
+		9666685D176D11CA003C6C64 /* AddTodoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTodoViewController.m; sourceTree = "<group>"; };
 		96E36ECD176BC2C700D59598 /* BootcampTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BootcampTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E36ED0176BC2C700D59598 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		96E36ED2176BC2C700D59598 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,6 +110,8 @@
 				96E36ED7176BC2C700D59598 /* Supporting Files */,
 				96666859176CE24C003C6C64 /* UIView+GeometryAdditions.h */,
 				9666685A176CE24C003C6C64 /* UIView+GeometryAdditions.m */,
+				9666685C176D11CA003C6C64 /* AddTodoViewController.h */,
+				9666685D176D11CA003C6C64 /* AddTodoViewController.m */,
 			);
 			path = BootcampTodo;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 				96E36EF3176BC2C700D59598 /* DetailViewController.m in Sources */,
 				96E36EFB176BD3A800D59598 /* HelloWorldViewController.m in Sources */,
 				9666685B176CE24C003C6C64 /* UIView+GeometryAdditions.m in Sources */,
+				9666685E176D11CA003C6C64 /* AddTodoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
