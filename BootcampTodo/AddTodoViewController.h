@@ -10,4 +10,12 @@
 
 @interface AddTodoViewController : UITableViewController
 
+@property (nonatomic, strong) IBOutlet UITextField * nameTextField;
+
+//- (IBAction)doneSubmitCallback:(id)sender;
+-(IBAction)cancel:(id)sender;
+-(IBAction)done:(id)sender;
+
 @end
+
+
