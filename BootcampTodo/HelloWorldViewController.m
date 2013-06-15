@@ -7,7 +7,7 @@
 //
 
 #import "HelloWorldViewController.h"
-
+//#import "UIView+GeometryAdditions.h"
 @interface HelloWorldViewController ()
 
 @end
@@ -28,8 +28,18 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     self.helloWorldLabel.text = @"Hello World!";
+    //self.helloWorldButton.
     
+    UIButton* customButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     
+    [customButton setTitle:@"custom button" forState:UIControlStateNormal];
+    [customButton sizeToFit];
+    [self.view addSubview:customButton];
+    
+    customButton.left=20;
+   // customButton.right = 20;
+    customButton.top = 100;
+   
     //self.view
     
 }
@@ -38,6 +48,13 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+-(IBAction)navigateToOtherController:(id)sender
+{
+    
+    
 }
 
 @end

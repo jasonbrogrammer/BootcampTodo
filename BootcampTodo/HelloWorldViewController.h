@@ -12,4 +12,8 @@
 
 @property (nonatomic,strong) IBOutlet UILabel* helloWorldLabel;
 
+@property (nonatomic,strong) IBOutlet UIButton* helloWorldButton;
+
+@property (nonatomic, strong) IBOutlet UINavigationController* controller;
+
 @end
