@@ -36,10 +36,10 @@
     
     _objects = [[NSMutableArray alloc] init];
     
-    [_objects addObject:[NSDate date]];
-     [_objects addObject:[NSDate date]];
-     [_objects addObject:[NSDate date]];
-     [_objects addObject:[NSDate date]];
+//    [_objects addObject:[NSDate date]];
+//     [_objects addObject:[NSDate date]];
+//     [_objects addObject:[NSDate date]];
+//     [_objects addObject:[NSDate date]];
     
     
 	// Do any additional setup after loading the view, typically from a nib.
@@ -83,7 +83,16 @@
     
     
     
-    NSLog(@" Adding TODO ITem =) ");
+    NSLog(@" Adding TODO ITem =) %@", todoItem);
+    
+    [_objects insertObject:todoItem atIndex:0];
+    
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+
+  //  NSIndexPath
+    
 }
 
 
