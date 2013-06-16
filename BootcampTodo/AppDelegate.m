@@ -5,7 +5,7 @@
 //  Created by Jason Chang on 6/14/13.
 //  Copyright (c) 2013 Jason Chang. All rights reserved.
 //
-
+#import <Parse/Parse.h>
 #import "AppDelegate.h"
 
 @implementation AppDelegate
@@ -14,6 +14,11 @@
 {
     
     // Starting point for application =)
+    
+    [Parse setApplicationId:@"fcEg8w4XqAfNUziSTsftux3CiBJLhGg27dCRC1W7"
+                  clientKey:@"zMSJPUGmKCLdET1927OUGB5LYQxj60RjQpWo7yL0"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {

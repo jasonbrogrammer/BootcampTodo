@@ -45,6 +45,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+    
+    UIImageView* imageView = (UIImageView*) [self.view viewWithTag:501];
+    
+    UIImage* image = [UIImage imageNamed:@"Icon.png"];
+    
+    [imageView setImage:image];
+    
 }
 
 - (void)didReceiveMemoryWarning
