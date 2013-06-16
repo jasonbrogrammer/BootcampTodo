@@ -85,7 +85,18 @@
     
     NSLog(@" Adding TODO ITem =) %@", todoItem);
     
-    [_objects insertObject:todoItem atIndex:0];
+    
+    NSMutableDictionary* todoDictionary = [NSMutableDictionary dictionary];
+    
+    
+    [todoDictionary setObject:todoItem forKey:@"name"];
+    [todoDictionary setObject:@NO forKey:@"isComplete"];
+    
+    [_objects insertObject:todoDictionary atIndex:0];
+    
+    
+    
+  //  [_objects insertObject:todoItem atIndex:0];
     
     
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
@@ -93,6 +104,10 @@
 
   //  NSIndexPath
     
+}
+
+-(void) toggleButtonPressed:(id)sender{
+    NSLog(@"Button Pressed ctl");
 }
 
 
@@ -118,15 +133,41 @@
     return _objects.count;
 }
 
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    TodoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    NSDate *object = _objects[indexPath.row];
+    
+    cell.todoNameLabel.text = [object description];
+    
+    
+    [cell.checkboxButton removeTarget:self action:@selector(toggleButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.checkboxButton addTarget:self action:@selector(toggleButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    
+    
+    return cell;
+}
+
+
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
     NSDate *object = _objects[indexPath.row];
+    
+    
+    
+    
     cell.textLabel.text = [object description];
     return cell;
 }
-
+*/
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
