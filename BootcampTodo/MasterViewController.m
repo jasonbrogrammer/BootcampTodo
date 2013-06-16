@@ -12,6 +12,8 @@
 
 #import "DetailViewController.h"
 
+#import <Parse/Parse.h>
+
 @interface MasterViewController () {
     NSMutableArray *_objects;
 }
@@ -28,11 +30,43 @@
     [super awakeFromNib];
 }
 
+-(void)loadItemsFromParse{
+// PFObject
+    PFQuery *query = [PFQuery queryWithClassName:@"TodoItem"];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+       // code
+        
+        if(!error){
+            
+            [self.refreshControl endRefreshing];
+            
+            NSLog(@" Parse %@ ", [objects description]);
+            
+            _objects = [NSMutableArray arrayWithArray:objects];
+            [self.tableView reloadData];
+        }
+        
+        
+    }];
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     
+    
+    UIRefreshControl* refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl = refreshControl;
+    
+    
+    [refreshControl addTarget:self action:@selector(loadItemsFromParse) forControlEvents:UIControlEventValueChanged];
+    
+    
+    
+    [self loadItemsFromParse];
     
     _objects = [[NSMutableArray alloc] init];
     
@@ -94,9 +128,17 @@
     
     [_objects insertObject:todoDictionary atIndex:0];
     
-    
+  //  [todo saveIn]
     
   //  [_objects insertObject:todoItem atIndex:0];
+    PFObject* todo = [PFObject objectWithClassName:@"TodoItem"];
+    
+    [todo setObject:todoItem forKey:@"name"];
+    [todo setObject:@NO forKey:@"isComplete"];
+    
+    [todo saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        NSLog(@"PARSE save complete: %d",succeeded);
+    }];
     
     
  //   NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
