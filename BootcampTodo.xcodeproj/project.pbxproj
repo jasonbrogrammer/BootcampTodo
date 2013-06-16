@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9661A9A9176E4078001B21B9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9661A9A8176E4078001B21B9 /* CoreLocation.framework */; };
 		9666685B176CE24C003C6C64 /* UIView+GeometryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9666685A176CE24C003C6C64 /* UIView+GeometryAdditions.m */; };
 		9666685E176D11CA003C6C64 /* AddTodoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9666685D176D11CA003C6C64 /* AddTodoViewController.m */; };
 		96666861176D2D63003C6C64 /* TodoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96666860176D2D63003C6C64 /* TodoCell.m */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9661A9A8176E4078001B21B9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		96666859176CE24C003C6C64 /* UIView+GeometryAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GeometryAdditions.h"; sourceTree = "<group>"; };
 		9666685A176CE24C003C6C64 /* UIView+GeometryAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GeometryAdditions.m"; sourceTree = "<group>"; };
 		9666685C176D11CA003C6C64 /* AddTodoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTodoViewController.h; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9661A9A9176E4078001B21B9 /* CoreLocation.framework in Frameworks */,
 				96E36ED1176BC2C700D59598 /* UIKit.framework in Frameworks */,
 				96E36ED3176BC2C700D59598 /* Foundation.framework in Frameworks */,
 				96E36ED5176BC2C700D59598 /* CoreGraphics.framework in Frameworks */,
@@ -90,6 +93,7 @@
 		96E36ECF176BC2C700D59598 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9661A9A8176E4078001B21B9 /* CoreLocation.framework */,
 				96E36ED0176BC2C700D59598 /* UIKit.framework */,
 				96E36ED2176BC2C700D59598 /* Foundation.framework */,
 				96E36ED4176BC2C700D59598 /* CoreGraphics.framework */,

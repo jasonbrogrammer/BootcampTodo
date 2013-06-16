@@ -120,10 +120,12 @@
     [todo setValue:[NSNumber numberWithBool:toggleButton.selected] forKey:@"isComplete"];
     
     // notify the table to reload that row
+    
+    /*
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
     
     [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-
+*/
     
 }
 
@@ -156,14 +158,22 @@
 {
     TodoCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    NSDate *object = _objects[indexPath.row];
+    NSDictionary *object = _objects[indexPath.row];
     
-    cell.todoNameLabel.text = [object description];
+    cell.todoNameLabel.text = [object objectForKey:@"name"];
+    
+  //  cell.todoNameLabel.text = [object description];
+    cell.checkboxButton.selected = [[object objectForKey:@"isComplete"]boolValue];
+    
+    
     
     
     [cell.checkboxButton removeTarget:self action:@selector(toggleButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [cell.checkboxButton addTarget:self action:@selector(toggleButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+   
     
+    
+
     
     cell.checkboxButton.tag = indexPath.row;
     

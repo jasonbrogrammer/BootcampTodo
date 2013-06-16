@@ -43,6 +43,47 @@
     }];
 }
 
+
+- (void)startStandardUpdates
+{
+    // Create the location manager if this object does not
+    // already have one.
+    if (nil == _locationManager)
+        _locationManager = [[CLLocationManager alloc] init];
+    
+    _locationManager.delegate = self;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+    
+    // Set a movement threshold for new events.
+    _locationManager.distanceFilter = 500;
+    
+    [_locationManager startUpdatingLocation];
+}
+
+
+// Delegate method from the CLLocationManagerDelegate protocol.
+- (void)locationManager:(CLLocationManager *)manager
+     didUpdateLocations:(NSArray *)locations {
+    // If it's a relatively recent event, turn off updates to save power
+    CLLocation* location = [locations lastObject];
+    NSDate* eventDate = location.timestamp;
+    NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
+    if (abs(howRecent) < 15.0) {
+        // If the event is recent, do something with it.
+        NSLog(@"latitude %+.6f, longitude %+.6f\n",
+              location.coordinate.latitude,
+              location.coordinate.longitude);
+    }
+}
+
+-(void) viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+//    [super viewDidAppear:<#animated#>];
+    
+    [self startStandardUpdates];
+    
+}
+
 -(IBAction)done:(id)sender{
     NSLog(@" done");
     
