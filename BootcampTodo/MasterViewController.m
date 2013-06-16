@@ -99,15 +99,32 @@
   //  [_objects insertObject:todoItem atIndex:0];
     
     
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+ //   NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+ //   [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 
+    [self.tableView reloadData];
   //  NSIndexPath
     
 }
 
 -(void) toggleButtonPressed:(id)sender{
-    NSLog(@"Button Pressed ctl");
+    UIButton* toggleButton = (UIButton*)sender;
+    int row = toggleButton.tag;
+    
+    NSLog(@"button pressed %d",row);
+    
+    // grab the dictionary from the model
+    NSDictionary* todo = [_objects objectAtIndex:row];
+    
+    // then set the complete value based on the toggble button
+    [todo setValue:[NSNumber numberWithBool:toggleButton.selected] forKey:@"isComplete"];
+    
+    // notify the table to reload that row
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
+    
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+
+    
 }
 
 
@@ -148,7 +165,7 @@
     [cell.checkboxButton addTarget:self action:@selector(toggleButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     
-    
+    cell.checkboxButton.tag = indexPath.row;
     
     return cell;
 }
