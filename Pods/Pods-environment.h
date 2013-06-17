@@ -12,6 +12,12 @@
 #define COCOAPODS_VERSION_MINOR_Facebook_iOS_SDK 5
 #define COCOAPODS_VERSION_PATCH_Facebook_iOS_SDK 2
 
+// ObjectiveSugar
+#define COCOAPODS_POD_AVAILABLE_ObjectiveSugar
+#define COCOAPODS_VERSION_MAJOR_ObjectiveSugar 0
+#define COCOAPODS_VERSION_MINOR_ObjectiveSugar 8
+#define COCOAPODS_VERSION_PATCH_ObjectiveSugar 0
+
 // Parse
 #define COCOAPODS_POD_AVAILABLE_Parse
 #define COCOAPODS_VERSION_MAJOR_Parse 1
